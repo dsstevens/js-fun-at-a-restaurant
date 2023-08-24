@@ -30,3 +30,5 @@ problem.
   The project spec can be found [here](https://frontend.turing.edu/projects/module-1/restaurant.html).
 
   npm test test/meal-test.js
+  npm test test/order-test.js
+  npm test test/restaurant-test.js
