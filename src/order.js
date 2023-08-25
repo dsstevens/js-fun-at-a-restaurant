@@ -12,9 +12,17 @@ function refundOrder(orderNumber, deliveryOrders) {
   }
 }
 
-function listItems(){
-  
+function listItems(deliveryOrders) {
+  var deliveryItems = []
+ for(var i = 0; i <deliveryOrders.length; i++){
+  deliveryItems.push(deliveryOrders[i].item)
+  }
+ var itemString = deliveryItems.join(', ')
+ return itemString
 }
+// deliveryOrders[i].item concatenated into a string
+//toString, join
+
 module.exports = {
   takeOrder,
   refundOrder,
