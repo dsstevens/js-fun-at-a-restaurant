@@ -4,18 +4,20 @@ function takeOrder(order, deliveryOrders) {
   }
 }
 
-function refundOrder(orderNumber, deliveryOrders){
-if 
+function refundOrder(orderNumber, deliveryOrders) {
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    if (deliveryOrders[i].orderNumber === orderNumber) {
+      deliveryOrders.splice(i, 1);
+    }
+  }
 }
-// need to match the orderNumber to the orderNumber in the object
-// needs to have a conditional to "refund" and return a shorter array
-//passing two args, need two params
-// return the array shorter
-// array method to remove the element
 
+function listItems(){
+  
+}
 module.exports = {
   takeOrder,
   refundOrder,
-  // listItems,
+  listItems,
   // searchOrder
-}
+};
