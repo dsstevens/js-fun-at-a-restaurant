@@ -13,19 +13,28 @@ function refundOrder(orderNumber, deliveryOrders) {
 }
 
 function listItems(deliveryOrders) {
-  var deliveryItems = []
- for(var i = 0; i <deliveryOrders.length; i++){
-  deliveryItems.push(deliveryOrders[i].item)
+  var deliveryItems = [];
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    deliveryItems.push(deliveryOrders[i].item);
   }
- var itemString = deliveryItems.join(', ')
- return itemString
+  var itemString = deliveryItems.join(", ");
+  return itemString;
 }
 // deliveryOrders[i].item concatenated into a string
 //toString, join
+
+function searchOrder(orderArray, itemName) {
+  for (var i = 0; i < orderArray.length; i++) {
+    if (orderArray[i].item.includes(itemName)) {
+      return true;
+    } 
+  }
+  return false
+}
 
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder,
 };
