@@ -20,8 +20,6 @@ function listItems(deliveryOrders) {
   var itemString = deliveryItems.join(", ");
   return itemString;
 }
-// deliveryOrders[i].item concatenated into a string
-//toString, join
 
 function searchOrder(orderArray, itemName) {
   for (var i = 0; i < orderArray.length; i++) {
